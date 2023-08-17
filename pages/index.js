@@ -28,7 +28,7 @@ const Index = () => {
               <div style={{display: "flex", justifyContent: "center", margin_top: "25px"}}>
                 <a
                     className="neoh_fn_button only_text"
-                    href="http://galaxymentor.com:3000/"
+                    href="http://galaxymentor.com:3000/course-selection"
                     style={{marginRight: "5px"}}
                 >
                   Live Demo
