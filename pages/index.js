@@ -1,13 +1,9 @@
-import AboutComponent from "../src/components/AboutComponent";
-import BlogComponent from "../src/components/BlogComponent";
-import Drops from "../src/components/Drops";
-import ServicesComponent from "../src/components/ServicesComponent";
-import WhyChooseUsComponent from "../src/components/WhyChooseUsComponent";
+
 import Layout from "../src/layout/Layout";
 
 const Index = () => {
   return (
-    <Layout pageName={"Home Static"}>
+    <Layout pageName={"Welcome"}>
       {/* Hero Header */}
       <div className="neoh_fn_hero">
         {/* Overlay (of hero header) */}
@@ -23,23 +19,43 @@ const Index = () => {
         <div className="hero_content">
           <div className="container">
             <div className="content">
-              <h2 className="fn_title" title="Neoh">
+              <h2 className="fn_title" title="Galaxy Mentor">
                 Galaxy Mentor
               </h2>
               <p className="fn_desc fn_animated_text">
                  Unleash your potential across the universe of subjects with our AI-powered guidance.
               </p>
+              <div style={{display: "flex", justifyContent: "center", margin_top: "25px"}}>
+                <a
+                    className="neoh_fn_button only_text"
+                    href="http://galaxymentor.com:3000/"
+                    style={{marginRight: "5px"}}
+                >
+                  Live Demo
+                </a>
+                <a
+                    className="neoh_fn_button only_text"
+                    href="http://galaxymentor.com:3000/login"
+                    style={{marginLeft: "5px"}}
+                >
+                  Login
+                </a>
+              </div>
+
+
+
+
             </div>
           </div>
-          <a
-            href="#about"
-            className="neoh_fn_down magic-hover magic-hover__square"
-          >
-            <span className="text">Scroll Down</span>
-            <span className="icon">
-              <img src="svg/right-arr.svg" alt="" className="fn__svg" />
-            </span>
-          </a>
+          {/*<a*/}
+          {/*  href="#about"*/}
+          {/*  className="neoh_fn_down magic-hover magic-hover__square"*/}
+          {/*>*/}
+          {/*  <span className="text">Scroll Down</span>*/}
+          {/*  <span className="icon">*/}
+          {/*    <img src="svg/right-arr.svg" alt="" className="fn__svg" />*/}
+          {/*  </span>*/}
+          {/*</a>*/}
         </div>
       </div>
 

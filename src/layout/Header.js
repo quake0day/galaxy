@@ -24,67 +24,10 @@ const Header = () => {
         </div>
         <div className="nav_content">
           <div className="nav_menu">
-            <ul>
-              <li className="menu-item menu-item-has-children">
-                <a
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setHomeToggle(!homeToggle);
-                  }}
-                >
-                  Home
-                </a>
-                <ul
-                  className="sub-menu"
-                  style={{ display: homeToggle ? "block" : "none" }}
-                >
-                  <li>
-                    <Link href="/">Home Static</Link>
-                  </li>
-                  <li>
-                    <Link href="/kenburns">Full Kenburns</Link>
-                  </li>
-                  <li>
-                    <Link href="/half-kenburns">Half Kenburns</Link>
-                  </li>
-                  <li>
-                    <Link href="/half-slider">Half Slider</Link>
-                  </li>
-                </ul>
-              </li>
-              <li className="menu-item">
-                <Link href="/about">About</Link>
-              </li>
-              <li className="menu-item">
-                <Link href="/blog">Blog</Link>
-              </li>
-              <li className="menu-item">
-                <Link href="/contact">Contact</Link>
-              </li>
-            </ul>
+
           </div>
           <div className="nav_buttons">
-            <a
-              href="https://opensea.io/"
-              className="neoh_fn_button"
-              target="_blank"
-            >
-              <span className="icon">
-                <img src="svg/opensea.svg" alt="" className="fn__svg" />
-              </span>
-              <span className="text">OpenSea</span>
-            </a>
-            <a
-              href="https://discord.com/"
-              className="neoh_fn_button"
-              target="_blank"
-            >
-              <span className="icon">
-                <img src="svg/discord.svg" alt="" className="fn__svg" />
-              </span>
-              <span className="text">Discord</span>
-            </a>
+
           </div>
         </div>
         {/* Nav Footer */}
@@ -139,13 +82,13 @@ const Header = () => {
       <header className="neoh_fn_header">
         <div className="container">
           <div className="header_in">
-            <div className="logo">
-              <Link href="/">
-                <a>
-                  <img src="img/logo.png" alt="" />
-                </a>
-              </Link>
-            </div>
+            {/*<div className="logo">*/}
+            {/*  <Link href="/">*/}
+            {/*    <a>*/}
+            {/*      <img src="img/logo.png" alt="" />*/}
+            {/*    </a>*/}
+            {/*  </Link>*/}
+            {/*</div>*/}
             {/*<div className="trigger">*/}
             {/*  <div className="trigger_in" onClick={() => setToggle(!toggle)}>*/}
             {/*    <span className="text">Menu</span>*/}
