@@ -1,7 +1,26 @@
 
 import Layout from "../src/layout/Layout";
+import React, { useEffect } from 'react';
 
 const Index = () => {
+  useEffect(() => {
+    // 创建 gtag.js 脚本
+    const scriptTag = document.createElement('script');
+    scriptTag.async = true;
+    scriptTag.src = 'https://www.googletagmanager.com/gtag/js?id=G-T48JF7DKL9';
+    document.body.appendChild(scriptTag);
+
+    // 初始化 dataLayer 和 gtag 函数
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ window.dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-T48JF7DKL9');
+
+    // 清理函数
+    return () => {
+      document.body.removeChild(scriptTag);
+    }
+  }, []);
   return (
     <Layout pageName={"Welcome"}>
       {/* Hero Header */}
