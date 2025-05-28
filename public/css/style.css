@@ -148,6 +148,29 @@ a.full_link{
 .bg_overlay .bg_color{
 	z-index: 2;
 }
+/* Video Background Styles */
+.bg_overlay .bg_video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+	overflow: hidden;
+}
+.bg_overlay .bg_video video {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+	object-fit: cover;
+}
+/* End Video Background Styles */
 [class*="mw_"]{
 	margin-left: auto;
 	margin-right: auto;
@@ -4710,6 +4733,25 @@ a.full_link{
 	.neoh_fn_drops li{
 		width: 100%;
 	}
+
+	.neoh_fn_mosaic ul{
+		grid-template-columns: 1fr 1fr;
+	}
+	.neoh_fn_mosaic li{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	/* Mobile Video Background Optimization */
+	.bg_overlay .bg_video video {
+		/* 在移动设备上确保视频能正确显示 */
+		min-width: 100%;
+		min-height: 100%;
+		width: auto;
+		height: auto;
+		object-fit: cover;
+	}
+	/* End Mobile Video Background */
 }
 @media(max-width: 600px){
 	.neoh_fn_comments .comment-body{

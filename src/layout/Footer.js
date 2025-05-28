@@ -69,7 +69,7 @@ const Footer = () => {
         {/* Footer Bottom */}
         <div className="footer_bottom">
           <div className="container">
-            <div className="fb_in">
+            <div className="fb_in" style={{justifyContent: "center"}}>
               <div className="fb_left">
                 <p>
                   Copyright {new Date().getFullYear()} - Designed &amp;
@@ -82,19 +82,6 @@ const Footer = () => {
                     quake0day
                   </a>
                 </p>
-              </div>
-              <div className="fb_right">
-                {/*<ul>*/}
-                {/*  <li>*/}
-                {/*    <Link href="/roadmap">RoadMap</Link>*/}
-                {/*  </li>*/}
-                {/*  <li>*/}
-                {/*    <a href="#">Cookies</a>*/}
-                {/*  </li>*/}
-                {/*  <li>*/}
-                {/*    <a href="#">Terms &amp; Conditions</a>*/}
-                {/*  </li>*/}
-                {/*</ul>*/}
               </div>
             </div>
           </div>

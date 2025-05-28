@@ -1,8 +1,9 @@
-
 import Layout from "../src/layout/Layout";
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Index = () => {
+  const [videoError, setVideoError] = useState(false);
+
   useEffect(() => {
     // 创建 gtag.js 脚本
     const scriptTag = document.createElement('script');
@@ -21,6 +22,11 @@ const Index = () => {
       document.body.removeChild(scriptTag);
     }
   }, []);
+
+  const handleVideoError = () => {
+    setVideoError(true);
+  };
+
   return (
     <Layout pageName={"Welcome"}>
       {/* Hero Header */}
@@ -30,9 +36,39 @@ const Index = () => {
           {/* Overlay Color */}
           <div className="bg_color" />
           {/* !Overlay Color */}
-          {/* Overlay Image */}
-          <div className="bg_image" data-bg-img="img/hero/bg.png" />
-          {/* !Overlay Image */}
+          {/* Video Background with Fallback */}
+          {!videoError ? (
+            <div className="bg_video">
+              <video 
+                autoPlay 
+                muted 
+                loop 
+                playsInline
+                preload="auto"
+                onError={handleVideoError}
+                style={{
+                  position: 'absolute',
+                  top: '50%',
+                  left: '50%',
+                  minWidth: '100%',
+                  minHeight: '100%',
+                  width: 'auto',
+                  height: 'auto',
+                  transform: 'translate(-50%, -50%)',
+                  zIndex: -1,
+                  objectFit: 'cover'
+                }}
+              >
+                <source src="galaxymentor_bg.mp4" type="video/mp4" />
+                {/* 如果浏览器不支持视频，回退到原来的背景图片 */}
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          ) : (
+            /* 回退到原背景图片 */
+            <div className="bg_image" data-bg-img="img/hero/bg.png" />
+          )}
+          {/* !Video Background */}
         </div>
         {/* Overlay (of hero header) */}
         <div className="hero_content">
@@ -44,7 +80,7 @@ const Index = () => {
               <p className="fn_desc fn_animated_text">
                  Unleash your potential across the universe of subjects with our AI-powered guidance.
               </p>
-              <div style={{display: "flex", justifyContent: "center", margin_top: "25px"}}>
+              <div style={{display: "flex", justifyContent: "center", marginTop: "40px"}}>
                 <a
                     className="neoh_fn_button only_text"
                     href="http://galaxymentor.com:3000/course-selection"
