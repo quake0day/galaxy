@@ -83,14 +83,14 @@ const Index = () => {
               <div style={{display: "flex", justifyContent: "center", marginTop: "40px"}}>
                 <a
                     className="neoh_fn_button only_text"
-                    href="http://galaxymentor.com:3000/course-selection"
+                    href="https://v.galaxymentor.com/"
                     style={{marginRight: "5px"}}
                 >
                   Live Demo
                 </a>
                 <a
                     className="neoh_fn_button only_text"
-                    href="http://galaxymentor.com:3000/login"
+                    href="https://v.galaxymentor.com/login"
                     style={{marginLeft: "5px"}}
                 >
                   Login
